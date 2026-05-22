@@ -277,10 +277,16 @@ function renderCompanyDetail(company, companies) {
     console.error('[ERROR] Failed to render caseStudies:', e);
   }
 
-  // Resources
+  // Resources with Pitchdeck Links
   try {
     const resourcesSection = document.getElementById('resources');
     if (resourcesSection) {
+      const pitchdeckSlideMap = {
+        1: 4, 2: 5, 3: 6, 4: 7, 5: 9,
+        6: 10, 7: 11, 8: 12, 9: 14, 10: 14
+      };
+      const pitchdeckSlide = pitchdeckSlideMap[company.id];
+
       const resourcesHtml = company.resources.map((res, idx) => `
         <div class="resource-card">
           <div class="resource-header">
@@ -288,7 +294,13 @@ function renderCompanyDetail(company, companies) {
             <h4>${res.title}</h4>
           </div>
           <p class="resource-description">${res.description}</p>
-          <a href="${res.url}" target="_blank" class="resource-link">→ 자료 보기</a>
+          <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+            <a href="${res.url}" target="_blank" class="resource-link">→ 자료 보기</a>
+            <a href="../palantir-ecosystem-analysis.html?slide=${pitchdeckSlide}"
+               style="display: inline-block; padding: 0.6rem 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9rem;">
+              📊 피치덱
+            </a>
+          </div>
         </div>
       `).join('');
       resourcesSection.innerHTML = resourcesHtml;
