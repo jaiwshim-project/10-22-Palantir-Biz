@@ -281,28 +281,35 @@ function renderCompanyDetail(company, companies) {
   try {
     const resourcesSection = document.getElementById('resources');
     if (resourcesSection) {
-      const pitchdeckSlideMap = {
-        1: 4, 2: 5, 3: 6, 4: 7, 5: 9,
-        6: 10, 7: 11, 8: 12, 9: 14, 10: 14
-      };
-      const pitchdeckSlide = pitchdeckSlideMap[company.id];
+      // 이 회사의 자료들의 글로벌 인덱스 계산
+      let globalResourceIdx = 1; // resources-analysis.html의 슬라이드는 1부터 시작
+      for (let c of companies) {
+        if (c.id < company.id) {
+          globalResourceIdx += c.resources.length * 10; // 각 자료마다 10장
+        } else {
+          break;
+        }
+      }
 
-      const resourcesHtml = company.resources.map((res, idx) => `
-        <div class="resource-card">
-          <div class="resource-header">
-            <span class="resource-type">${res.type}</span>
-            <h4>${res.title}</h4>
+      const resourcesHtml = company.resources.map((res, idx) => {
+        const resourcePitchdeckSlide = globalResourceIdx + (idx * 10);
+        return `
+          <div class="resource-card">
+            <div class="resource-header">
+              <span class="resource-type">${res.type}</span>
+              <h4>${res.title}</h4>
+            </div>
+            <p class="resource-description">${res.description}</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+              <a href="${res.url}" target="_blank" class="resource-link">→ 자료 보기</a>
+              <a href="../resources-analysis.html?slide=${resourcePitchdeckSlide}"
+                 style="display: inline-block; padding: 0.6rem 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9rem;">
+                📊 자료분석 피치덱
+              </a>
+            </div>
           </div>
-          <p class="resource-description">${res.description}</p>
-          <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-            <a href="${res.url}" target="_blank" class="resource-link">→ 자료 보기</a>
-            <a href="../palantir-ecosystem-analysis.html?slide=${pitchdeckSlide}"
-               style="display: inline-block; padding: 0.6rem 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9rem;">
-              📊 피치덱
-            </a>
-          </div>
-        </div>
-      `).join('');
+        `;
+      }).join('');
       resourcesSection.innerHTML = resourcesHtml;
       console.log('[RENDER] Resources rendered:', company.resources.length);
     }
