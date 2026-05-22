@@ -28,6 +28,9 @@ function generateResourceSlides(company, resource, resourceIndex) {
         <p class="slide-description" style="margin-top: 2rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
           ${resource.description}
         </p>
+        <div class="slide-notes">
+          <p><strong>📝 슬라이드 1 설명:</strong> ${company.name}이 공개한 "${resource.title}"은 ${resource.type} 형식으로 제공되는 공식 자료입니다. 이 자료는 Palantir Foundry/AIP 생태계에서 ${company.name}의 전문성과 비즈니스 접근 방식을 구체적으로 보여줍니다. ${company.type}인 이 회사가 어떤 관점에서 데이터와 AI 변환을 바라보며, 고객에게 어떤 메시지를 전달하는지 파악할 수 있습니다. 이 자료를 통해 ${company.name}의 전략적 포지셔닝과 시장 차별성을 첫 번째로 만나게 됩니다.</p>
+        </div>
       </div>
     </div>
     `,
@@ -57,6 +60,9 @@ function generateResourceSlides(company, resource, resourceIndex) {
         <p style="margin-top: 2rem; color: rgba(255,255,255,0.85);">
           <strong>Priority:</strong> ${company.priority === 1 ? '⭐ 최우선 벤치마킹 대상' : company.priority === 2 ? '⭐⭐ 중요 참고' : '⭐⭐⭐ 미래 전략'}
         </p>
+        <div class="slide-notes">
+          <p><strong>📝 슬라이드 2 설명:</strong> ${company.name}의 조직 배경과 역량을 이해하는 슬라이드입니다. ${company.company_info.founded}부터 운영되어온 이 회사는 ${company.company_info.headquarters}를 중심으로 ${company.company_info.regions.join(', ')}에서 활동하며 ${company.company_info.employees}명 규모를 유지하고 있습니다. 핵심 강점으로는 ${company.strengths[0]}, ${company.strengths[1]} 등이 있습니다. Priority ${company.priority} 평가는 Palantir 생태계에서의 포지셔닝, 성숙도, 시장 영향력을 반영하며, 대표님 비즈니스에 대한 벤치마킹 가치 정도를 나타냅니다.</p>
+        </div>
       </div>
     </div>
     `,
@@ -74,6 +80,9 @@ function generateResourceSlides(company, resource, resourceIndex) {
             <li>Palantir 생태계에서의 역할과 포지셔닝</li>
             <li>실제 구현 사례와 lessons learned</li>
           </ul>
+        </div>
+        <div class="slide-notes">
+          <p><strong>📝 슬라이드 3 설명:</strong> 이 슬라이드는 자료의 핵심 학습 포인트를 정리합니다. ${company.name}이 이 자료를 통해 전달하고자 하는 핵심 메시지는 ${company.strengths[0]}입니다. 자료 속에서 발견할 수 있는 구체적인 인사이트는 ${company.solutions[0]}를 어떻게 구현하고 운영하는지에 관한 것입니다. Palantir 생태계에서 ${company.name}이 어떤 역할을 하며, 고객 문제를 어떻게 해결하는지 이 자료의 내용으로부터 직접 파악할 수 있습니다.</p>
         </div>
       </div>
     </div>
@@ -101,6 +110,9 @@ function generateResourceSlides(company, resource, resourceIndex) {
             <p>${company.industries.join(', ')}</p>
           </div>
         </div>
+        <div class="slide-notes">
+          <p><strong>📝 슬라이드 4 설명:</strong> ${company.name}의 전략적 포지셔닝을 4가지 측면으로 분석합니다. 비즈니스 모델 관점에서 ${company.differentiation}는 경쟁 대비 차별성입니다. 기술 관점에서는 ${company.skills.slice(0, 3).join(', ')}라는 기술 스택을 역량으로 보유하고 있습니다. 시장 포지셔닝 관점에서 ${company.targetMarket}을 주요 고객으로 삼고 있으며, 산업별 적용 범위는 ${company.industries.join(', ')}입니다. 이 4가지 요소를 종합하면 ${company.name}의 시장 전략과 비즈니스 모델의 완전한 모습이 드러납니다.</p>
+        </div>
       </div>
     </div>
     `,
@@ -120,6 +132,9 @@ function generateResourceSlides(company, resource, resourceIndex) {
             </div>
           </div>
         `).join('')}
+        <div class="slide-notes">
+          <p><strong>📝 슬라이드 5 설명:</strong> 이론이 아닌 실제 작동하는 사례를 보여줍니다. "${company.caseStudies[0].title}"은 ${company.caseStudies[0].industry} 산업에서 ${company.caseStudies[0].challenge}라는 구체적인 문제를 마주했던 실제 고객의 사례입니다. ${company.name}은 이 문제를 ${company.caseStudies[0].solution.substring(0, 80)}... 방식으로 해결했으며, 그 결과 ${company.caseStudies[0].result}를 달성했습니다. 이 사례는 ${company.name}의 전략과 기술이 실제 비즈니스 환경에서 어떻게 작동하는지 증명합니다.</p>
+        </div>
       </div>
     </div>
     `,
@@ -137,6 +152,9 @@ function generateResourceSlides(company, resource, resourceIndex) {
             <li><strong>ROI 메시지:</strong> ${company.strengths[1]}</li>
             <li><strong>참고 가치:</strong> ${company.relevanceToSB}</li>
           </ul>
+        </div>
+        <div class="slide-notes">
+          <p><strong>📝 슬라이드 6 설명:</strong> ${company.name}의 사례로부터 대표님 비즈니스에 직접 적용할 수 있는 가치를 추출합니다. ${company.name}의 비즈니스 구조는 ${company.differentiation.substring(0, 60)}로 요약되며, 이는 AX 플랫폼 기반 산업별 솔루션 확장에 직접 참고할 수 있습니다. ${company.targetMarket} 고객군에 접근하는 방식, ${company.solutions[0]} 서비스를 제공하는 운영 모델, 그리고 고객에게 전달하는 ROI 메시지는 모두 대표님의 사업 확대 과정에서 활용할 수 있는 검증된 전략입니다.</p>
         </div>
       </div>
     </div>
@@ -167,6 +185,9 @@ function generateResourceSlides(company, resource, resourceIndex) {
         <p style="margin-top: 1.5rem; color: rgba(255,255,255,0.85);">
           이 기술 스택은 <strong>AX Ontology OS</strong> 개발에 직접 참고할 수 있는 기술 조합입니다.
         </p>
+        <div class="slide-notes">
+          <p><strong>📝 슬라이드 7 설명:</strong> ${company.name}이 보유한 기술 역량을 정리합니다. Foundry, AIP, Ontology, 데이터 엔지니어링 등의 핵심 기술을 조합하여 ${company.industries.join(', ')} 등 다양한 산업에 솔루션을 제공합니다. 각 기술은 단순히 보유한 것이 아니라 실제 프로젝트에서 검증된 역량들입니다. 이 기술 스택과 산업별 적용 경험은 대표님의 AX Ontology OS 플랫폼 개발, 산업별 솔루션 확장에 직접 참고할 수 있는 검증된 기술 로드맵을 제시합니다.</p>
+        </div>
       </div>
     </div>
     `,
@@ -191,6 +212,9 @@ function generateResourceSlides(company, resource, resourceIndex) {
             <strong>한국 시장 포지셔닝:</strong> 대표님의 AX 플랫폼은 이들의 강점을 통합하면서도 한국 맞춤형 산업 솔루션에 집중할 수 있음.
           </p>
         </div>
+        <div class="slide-notes">
+          <p><strong>📝 슬라이드 8 설명:</strong> ${company.name}이 시장에서 어디에 위치하는지 분석합니다. 주요 고객은 ${company.targetMarket}이며, 경쟁사 대비 차별 포인트는 ${company.differentiation}입니다. 이 포지셔닝은 해외(특히 미국) 시장에서 검증된 것이므로, 한국 시장에 적용할 때는 현지화가 필요합니다. 대표님의 AX 플랫폼은 ${company.name}의 전역적 강점을 통합하면서도, 한국 기업, 공공기관, 산업 특성을 반영한 맞춤형 솔루션으로 차별화할 수 있습니다.</p>
+        </div>
       </div>
     </div>
     `,
@@ -212,6 +236,9 @@ function generateResourceSlides(company, resource, resourceIndex) {
             </p>
           </div>
         `).join('')}
+        <div class="slide-notes">
+          <p><strong>📝 슬라이드 9 설명:</strong> ${company.name}이 실제 프로젝트에서 달성한 구체적 성과를 보여줍니다. ${company.caseStudies[0].result}는 ${company.caseStudies[0].title}에서 달성한 결과입니다. 이러한 지표들(성능 향상률, 비용 절감, 시간 단축)은 고객에게 ROI를 증명하는 핵심 메트릭입니다. ${company.name}이 이 정도의 성과를 달성했다는 것은 기술, 인력, 운영 방식이 모두 검증되었음을 의미합니다. 대표님의 제안서나 고객 피칭에서도 이런 구체적 수치 기반의 성과 지표를 포함하는 것이 중요합니다.</p>
+        </div>
       </div>
     </div>
     `,
@@ -241,6 +268,9 @@ function generateResourceSlides(company, resource, resourceIndex) {
         <p style="margin-top: 3rem; color: rgba(212, 175, 55, 0.9); font-size: 0.95rem;">
           ← 이전 회사 목록 | <a href="../index.html" style="color: #d4af37;">홈으로 돌아가기</a>
         </p>
+        <div class="slide-notes">
+          <p><strong>📝 슬라이드 10 설명:</strong> 이 자료 학습을 마친 후 실행해야 할 4단계 액션 계획입니다. 첫 번째는 원본 자료를 충분히 읽고 깊이 있게 이해하는 단계입니다. 두 번째는 ${company.name}의 기술 방식, 비즈니스 모델, 고객 접근 전략을 분석하고 문서화합니다. 세 번째는 분석한 내용 중 대표님의 AX Ontology OS 플랫폼에 적용할 수 있는 요소를 구체화합니다. 마지막으로 이 학습 결과를 실제 고객 제안서나 영업 자료에 반영하여 설득력 있는 경쟁 우위 전략으로 활용합니다.</p>
+        </div>
       </div>
     </div>
     `
@@ -309,14 +339,14 @@ function generateResourcePitchdeckHTML(company, resource, resourceIndex) {
       height: 100%;
       display: none;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 4rem;
+      justify-content: space-between;
+      padding: 3rem 4rem 1.5rem 4rem;
       background: linear-gradient(135deg, rgba(15, 52, 96, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
       position: absolute;
       top: 0;
       left: 0;
       animation: fadeIn 0.5s ease-in-out;
+      overflow-y: auto;
     }
 
     .slide.active {
@@ -397,6 +427,19 @@ function generateResourcePitchdeckHTML(company, resource, resourceIndex) {
     .slide-description {
       color: rgba(255, 255, 255, 0.9);
       line-height: 1.7;
+    }
+
+    .slide-notes {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .slide-notes p {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.8;
+      text-align: justify;
     }
 
     .two-column {
@@ -671,6 +714,10 @@ function generateResourcePitchdeckHTML(company, resource, resourceIndex) {
       .action-steps {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .slide-notes p {
+        font-size: 0.85rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -688,6 +735,10 @@ function generateResourcePitchdeckHTML(company, resource, resourceIndex) {
 
       .action-steps {
         grid-template-columns: 1fr;
+      }
+
+      .slide-notes p {
+        font-size: 0.8rem;
       }
     }
   </style>
