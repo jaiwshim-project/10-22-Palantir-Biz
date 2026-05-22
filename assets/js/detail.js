@@ -75,6 +75,39 @@ function renderCompanyDetail(company) {
       <p>${company.relevanceToSB}</p>
     </div>
   `;
+
+  // Case Studies
+  const caseStudiesHtml = company.caseStudies.map((cs, idx) => `
+    <div class="case-study-card">
+      <h4>${idx + 1}. ${cs.title}</h4>
+      <div class="case-study-meta">
+        <span class="badge">${cs.industry}</span>
+        <span class="badge duration">${cs.duration}</span>
+      </div>
+      <div class="case-study-content">
+        <h5>🎯 과제</h5>
+        <p>${cs.challenge}</p>
+        <h5>✅ 솔루션</h5>
+        <p>${cs.solution}</p>
+        <h5>📊 결과</h5>
+        <p>${cs.result}</p>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('caseStudies').innerHTML = caseStudiesHtml;
+
+  // Resources
+  const resourcesHtml = company.resources.map((res, idx) => `
+    <div class="resource-card">
+      <div class="resource-header">
+        <span class="resource-type">${res.type}</span>
+        <h4>${res.title}</h4>
+      </div>
+      <p class="resource-description">${res.description}</p>
+      <a href="${res.url}" target="_blank" class="resource-link">→ 자료 보기</a>
+    </div>
+  `).join('');
+  document.getElementById('resources').innerHTML = resourcesHtml;
 }
 
 // Load on page ready

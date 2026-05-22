@@ -3,7 +3,11 @@
     "allow": [
       "Bash(Get-ChildItem -Path \"C:\\\\01 클로드코드\\\\10-22 팔란티어 비즈니스\" -Recurse -Depth 2)",
       "Bash(Select-Object -First 30)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(curl -s http://localhost:8765/index.html)",
+      "Bash(npm list *)",
+      "Bash(python3 -m json.tool data/companies.json)"
     ]
   }
 }

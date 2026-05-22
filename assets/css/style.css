@@ -458,3 +458,125 @@ footer p {
 .text-small {
   font-size: 0.85rem;
 }
+
+/* Case Study Cards */
+.case-study-card {
+  background: var(--gray-100);
+  border: 1px solid var(--gray-300);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all var(--transition);
+}
+
+.case-study-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.case-study-card h4 {
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.case-study-meta {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: var(--accent-light);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge.duration {
+  background: var(--success);
+}
+
+.case-study-content h5 {
+  color: var(--gray-700);
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.case-study-content p {
+  color: var(--gray-700);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Resource Cards */
+.resource-card {
+  background: white;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+  transition: all var(--transition);
+}
+
+.resource-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
+}
+
+.resource-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.resource-type {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white;
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.resource-card h4 {
+  color: var(--primary);
+  font-size: 1rem;
+  margin: 0;
+  flex-grow: 1;
+  line-height: 1.4;
+}
+
+.resource-description {
+  color: var(--gray-700);
+  font-size: 0.9rem;
+  margin: 0.8rem 0;
+  line-height: 1.6;
+}
+
+.resource-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--transition);
+  margin-top: 0.5rem;
+}
+
+.resource-link:hover {
+  color: var(--primary);
+  transform: translateX(4px);
+}
