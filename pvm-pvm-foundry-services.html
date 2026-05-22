@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PVM Foundry Services - PVM Inc.</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #5642a6;
+      --accent: #d4af37;
+      --bg-base: #ffffff;
+      --bg-surface: #fafafa;
+      --bg-secondary: #f3f4f6;
+      --bg-tertiary: #e5e7eb;
+      --text-primary: rgba(0, 0, 0, 1);
+      --text-secondary: rgba(0, 0, 0, 0.8);
+      --text-tertiary: rgba(0, 0, 0, 0.6);
+      --border: #d1d5db;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .pitchdeck-container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #0f3460 100%);
+    }
+
+    .slides-viewer {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem;
+      background: linear-gradient(135deg, rgba(15, 52, 96, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .slide.active {
+      display: flex;
+      z-index: 10;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .slide-content {
+      max-width: 1000px;
+      width: 100%;
+      z-index: 2;
+      position: relative;
+    }
+
+    .slide h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #d4af37 0%, #f0e68c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+
+    .slide h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #d4af37 0%, #f0e68c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .slide h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #d4af37;
+    }
+
+    .slide h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: #f0e68c;
+    }
+
+    .slide-subtitle {
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 1rem;
+    }
+
+    .slide-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+      border: 1px solid #d4af37;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: #f0e68c;
+      font-weight: 500;
+    }
+
+    .slide-description {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .two-column > div {
+      padding: 1.5rem;
+      background: rgba(86, 66, 166, 0.1);
+      border-left: 3px solid #d4af37;
+      border-radius: 8px;
+    }
+
+    .two-column h4 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .two-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .two-column li {
+      padding: 0.5rem 0;
+      color: rgba(255, 255, 255, 0.85);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .two-column li:last-child {
+      border-bottom: none;
+    }
+
+    .highlight-box {
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(86, 66, 166, 0.15) 0%, rgba(86, 66, 166, 0.05) 100%);
+      border-left: 4px solid #d4af37;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    .highlight-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .highlight-box li {
+      padding: 0.6rem 0;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .card {
+      padding: 1.5rem;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      background: rgba(212, 175, 55, 0.12);
+      border-color: #d4af37;
+    }
+
+    .card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .card p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .case-study-box {
+      padding: 1.5rem;
+      background: rgba(86, 66, 166, 0.1);
+      border-left: 4px solid #d4af37;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .case-study-box h4 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .case-detail {
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.8;
+    }
+
+    .case-detail p {
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .case-detail strong {
+      color: #f0e68c;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+
+    .skill-tag, .industry-tag {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+      border: 1px solid #d4af37;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: #f0e68c;
+      font-weight: 500;
+    }
+
+    .positioning-box {
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(86, 66, 166, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+      border: 2px solid #d4af37;
+      border-radius: 8px;
+    }
+
+    .metric-box {
+      padding: 1.5rem;
+      background: rgba(212, 175, 55, 0.08);
+      border-left: 4px solid #d4af37;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .metric-box h4 {
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+    }
+
+    .metrics {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .metric {
+      flex: 1;
+      text-align: center;
+      padding: 1rem;
+      background: rgba(212, 175, 55, 0.1);
+      border-radius: 8px;
+    }
+
+    .metric-value {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #d4af37;
+      margin-bottom: 0.5rem;
+    }
+
+    .action-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .action-step {
+      padding: 1.5rem;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(86, 66, 166, 0.1) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .action-step h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .action-step p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+    }
+
+    .final-slide {
+      justify-content: flex-start;
+      padding-top: 2rem;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .controls button {
+      padding: 0.6rem 1.5rem;
+      background: linear-gradient(135deg, #5642a6 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .controls button:hover {
+      background: linear-gradient(135deg, #764ba2 0%, #5642a6 100%);
+      transform: translateY(-2px);
+    }
+
+    .slide-counter {
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .home-link {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.6rem 1.5rem;
+      border: 1px solid #d4af37;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .home-link:hover {
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .slide {
+        padding: 2rem;
+      }
+
+      .slide h1 {
+        font-size: 2.5rem;
+      }
+
+      .slide h2 {
+        font-size: 2rem;
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .action-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .slide {
+        padding: 1.5rem;
+      }
+
+      .slide h1 {
+        font-size: 1.8rem;
+      }
+
+      .slide h2 {
+        font-size: 1.5rem;
+      }
+
+      .action-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="pitchdeck-container">
+    <div class="slides-viewer">
+      
+    <div class="slide slide-1">
+      <div class="slide-content">
+        <h1>PVM Foundry Services</h1>
+        <p class="slide-subtitle">PVM Inc.</p>
+        <div class="slide-meta">
+          <span class="badge">Service Profile</span>
+          <span class="badge">Government & Public Sector Digital Services</span>
+        </div>
+        <p class="slide-description" style="margin-top: 2rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+          PVM의 Foundry 구현 및 운영
+        </p>
+      </div>
+    </div>
+    
+    <div class="slide slide-2">
+      <div class="slide-content">
+        <h2>PVM Inc. - 회사 개요</h2>
+        <div class="two-column">
+          <div>
+            <h4>📊 기본 정보</h4>
+            <ul>
+              <li><strong>타입:</strong> Government & Public Sector Digital Services</li>
+              <li><strong>본사:</strong> USA</li>
+              <li><strong>설립:</strong> 2000년대</li>
+              <li><strong>규모:</strong> 100-500</li>
+              <li><strong>운영 지역:</strong> North America</li>
+            </ul>
+          </div>
+          <div>
+            <h4>🎯 핵심 강점</h4>
+            <ul>
+              <li>공공·정보기관 특화 도메인 지식</li><li>Palantir Foundry의 깊이 있는 이해</li><li>온톨로지 설계 전문성</li><li>장기 계약 기반 신뢰 관계 구축</li>
+            </ul>
+          </div>
+        </div>
+        <p style="margin-top: 2rem; color: rgba(255,255,255,0.85);">
+          <strong>Priority:</strong> ⭐⭐ 중요 참고
+        </p>
+      </div>
+    </div>
+    
+    <div class="slide slide-3">
+      <div class="slide-content">
+        <h2>📚 자료의 핵심 가치</h2>
+        <div class="highlight-box" style="background: rgba(212, 175, 55, 0.1); border: 2px solid #d4af37;">
+          <h4>🔍 이 자료에서 배울 점</h4>
+          <ul style="font-size: 1.1rem; line-height: 1.8;">
+            <li>PVM Inc.의 Service Profile 형태로 공개된 PVM Foundry Services</li>
+            <li>공공·정보기관 특화 도메인 지식</li>
+            <li>Palantir Foundry 구현 관련 인사이트</li>
+            <li>Palantir 생태계에서의 역할과 포지셔닝</li>
+            <li>실제 구현 사례와 lessons learned</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="slide slide-4">
+      <div class="slide-content">
+        <h2>💡 이 자료가 주는 전략적 인사이트</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <h4>🎯 비즈니스 모델</h4>
+            <p>공공·정보기관·법집행 분야에 특화된 가장 깊이 있는 Palantir 파트너. 단기 프로젝트가 아닌 장기 운영 모델.</p>
+          </div>
+          <div class="card">
+            <h4>🔧 기술 방향</h4>
+            <p>Ontology Design → Investigation Workflows → Long-term Operations</p>
+          </div>
+          <div class="card">
+            <h4>📈 시장 포지셔닝</h4>
+            <p>Target: 미 공공기관, 정보기관, 법집행기관, 공공 안보 조직</p>
+          </div>
+          <div class="card">
+            <h4>🌍 산업 범위</h4>
+            <p>Government, Law Enforcement, Intelligence</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="slide slide-5">
+      <div class="slide-content">
+        <h2>✅ 이 전략이 작동한 실제 사례</h2>
+        
+          <div class="case-study-box">
+            <h4>📌 법집행기관 조사 정보 통합 플랫폼 - 6년 장기 운영</h4>
+            <div class="case-detail">
+              <p><strong>산업:</strong> 법집행</p>
+              <p><strong>도전 과제:</strong> 여러 기관의 조사 정보를 통합하고, 용의자 추적·사건 분석을 지원</p>
+              <p><strong>솔루션:</strong> PVM의 온톨로지 기반 Foundry 플랫폼. 조사 정보 통합, 자동 분석, 장기 운영 지원....</p>
+              <p><strong>결과:</strong> 사건 해결 시간 40% 단축, 조사 효율성 50% 향상, 6년 지속 운영 중</p>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+    <div class="slide slide-6">
+      <div class="slide-content">
+        <h2>💰 대표님 비즈니스에의 가치</h2>
+        <div class="highlight-box" style="background: linear-gradient(135deg, rgba(86, 66, 166, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%); border: 2px solid var(--primary);">
+          <h4 style="color: #d4af37;">🎁 직접 활용 가능한 인사이트</h4>
+          <ul style="font-size: 1rem; line-height: 1.7;">
+            <li><strong>비즈니스 구조:</strong> 공공·정보기관·법집행 분야에 특화된 가장 깊이 있는 Palantir 파트너. 단기 프로젝트가 아닌 장기 운영 모델....</li>
+            <li><strong>고객 확대:</strong> 미 공공기관, 정보기관, 법집행기관, 공공 안보 조직 대상 접근 전략</li>
+            <li><strong>서비스 모델:</strong> Palantir Foundry 구현 방식 벤치마킹</li>
+            <li><strong>ROI 메시지:</strong> Palantir Foundry의 깊이 있는 이해</li>
+            <li><strong>참고 가치:</strong> 한국 공공 AX, 선거·행정 데이터 플랫폼에 참고할 만한 장기 운영 모델. 온톨로지 설계 방법론도 학습 가치 높음.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="slide slide-7">
+      <div class="slide-content">
+        <h2>🔧 기술 역량 & 스킬 매핑</h2>
+        <div class="two-column">
+          <div>
+            <h4>핵심 기술</h4>
+            <div class="skills-grid">
+              
+                <span class="skill-tag">Ontology Design</span>
+              
+                <span class="skill-tag">Investigation Workflows</span>
+              
+                <span class="skill-tag">Long-term Operations</span>
+              
+                <span class="skill-tag">Foundry</span>
+              
+                <span class="skill-tag">Government Solutions</span>
+              
+            </div>
+          </div>
+          <div>
+            <h4>적용 산업</h4>
+            <div class="skills-grid">
+              
+                <span class="industry-tag">Government</span>
+              
+                <span class="industry-tag">Law Enforcement</span>
+              
+                <span class="industry-tag">Intelligence</span>
+              
+            </div>
+          </div>
+        </div>
+        <p style="margin-top: 1.5rem; color: rgba(255,255,255,0.85);">
+          이 기술 스택은 <strong>AX Ontology OS</strong> 개발에 직접 참고할 수 있는 기술 조합입니다.
+        </p>
+      </div>
+    </div>
+    
+    <div class="slide slide-8">
+      <div class="slide-content">
+        <h2>🎯 시장 포지셔닝 & 경쟁 배치</h2>
+        <div class="positioning-box">
+          <h4>PVM Inc.의 위치</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem;">
+            <div>
+              <p><strong>Target Market</strong></p>
+              <p style="font-size: 1.1rem; color: #d4af37;">미 공공기관, 정보기관, 법집행기관, 공공 안보 조직</p>
+            </div>
+            <div>
+              <p><strong>Differentiation</strong></p>
+              <p style="font-size: 1rem;">공공·정보기관·법집행 분야에 특화된 가장 깊이 있는 Palantir 파트너. 단기 프로젝트가 아닌 장기 운영 모델.</p>
+            </div>
+          </div>
+          <p style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(212, 175, 55, 0.3); color: rgba(255,255,255,0.85);">
+            <strong>한국 시장 포지셔닝:</strong> 대표님의 AX 플랫폼은 이들의 강점을 통합하면서도 한국 맞춤형 산업 솔루션에 집중할 수 있음.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="slide slide-9">
+      <div class="slide-content">
+        <h2>📊 주요 성과 & 메트릭</h2>
+        
+          <div class="metric-box">
+            <h4>1. 법집행기관 조사 정보 통합 플랫폼 - 6년 장기 운영</h4>
+            <div class="metrics">
+              <div class="metric">
+                <span class="metric-value">사건 해결 시간 40% 단축</span>
+              </div>
+            </div>
+            <p style="margin-top: 0.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.8);">
+              사건 해결 시간 40% 단축, 조사 효율성 50% 향상, 6년 지속 운영 중
+            </p>
+          </div>
+        
+          <div class="metric-box">
+            <h4>2. 정보기관 위협 분석 시스템 - 온톨로지 기반</h4>
+            <div class="metrics">
+              <div class="metric">
+                <span class="metric-value">위협 감지 시간 50% 단축</span>
+              </div>
+            </div>
+            <p style="margin-top: 0.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.8);">
+              위협 감지 시간 50% 단축, 예측 정확도 88% 달성, 지속적 개선 진행 중
+            </p>
+          </div>
+        
+      </div>
+    </div>
+    
+    <div class="slide slide-10 final-slide">
+      <div class="slide-content" style="text-align: center;">
+        <h2>🚀 다음 액션 스텝</h2>
+        <div class="action-steps">
+          <div class="action-step">
+            <h4>1️⃣ Deep Dive</h4>
+            <p>원본 자료 읽기:<br><a href="https://www.pvmit.com/services/palantir-foundry-services" target="_blank" style="color: #d4af37; text-decoration: underline;">PVM Foundry Services</a></p>
+          </div>
+          <div class="action-step">
+            <h4>2️⃣ Analysis</h4>
+            <p>PVM Inc.의<br>기술 방식 분석</p>
+          </div>
+          <div class="action-step">
+            <h4>3️⃣ Adaptation</h4>
+            <p>AX 플랫폼에<br>적용 전략 수립</p>
+          </div>
+          <div class="action-step">
+            <h4>4️⃣ Pitch</h4>
+            <p>고객 제안서에<br>사례 활용</p>
+          </div>
+        </div>
+        <p style="margin-top: 3rem; color: rgba(212, 175, 55, 0.9); font-size: 0.95rem;">
+          ← 이전 회사 목록 | <a href="../index.html" style="color: #d4af37;">홈으로 돌아가기</a>
+        </p>
+      </div>
+    </div>
+    
+    </div>
+
+    <div class="controls">
+      <button onclick="previousSlide()">← 이전</button>
+      <span class="slide-counter"><span id="current">1</span> / 10</span>
+      <button onclick="nextSlide()">다음 →</button>
+      <a href="../index.html" class="home-link">🏠 홈</a>
+    </div>
+  </div>
+
+  <script>
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+      document.getElementById('current').textContent = index + 1;
+    }
+
+    function nextSlide() {
+      currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+      showSlide(currentSlideIndex);
+    }
+
+    function previousSlide() {
+      currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlideIndex);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+      if (e.key === 'ArrowLeft') previousSlide();
+    });
+
+    // URL parameter navigation
+    const urlParams = new URLSearchParams(window.location.search);
+    const slideParam = urlParams.get('slide');
+    if (slideParam) {
+      currentSlideIndex = Math.max(0, Math.min(parseInt(slideParam) - 1, totalSlides - 1));
+    }
+
+    showSlide(currentSlideIndex);
+  </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+{
+  "northslope": [
+    {
+      "title": "Vanguard Elite Partner Recognition",
+      "file": "northslope-vanguard-elite-partner-recognition.html",
+      "type": "News"
+    },
+    {
+      "title": "Privacy and Governance Whitepaper",
+      "file": "northslope-privacy-and-governance-whitepaper.html",
+      "type": "Whitepaper"
+    },
+    {
+      "title": "Operational Complexity Whitepaper",
+      "file": "northslope-operational-complexity-whitepaper.html",
+      "type": "Whitepaper"
+    }
+  ],
+  "10x-partners": [
+    {
+      "title": "10x Partners About Page",
+      "file": "10x-partners-10x-partners-about-page.html",
+      "type": "Profile"
+    },
+    {
+      "title": "How Palantir Enables Rapid Development",
+      "file": "10x-partners-how-palantir-enables-rapid-development.html",
+      "type": "Blog"
+    },
+    {
+      "title": "Privacy and Governance Whitepaper",
+      "file": "10x-partners-privacy-and-governance-whitepaper.html",
+      "type": "Whitepaper"
+    }
+  ],
+  "fourth-age": [
+    {
+      "title": "What is a Forward Deployed Engineer?",
+      "file": "fourth-age-what-is-a-forward-deployed-engineer.html",
+      "type": "Blog"
+    },
+    {
+      "title": "How to Build an FDE Team",
+      "file": "fourth-age-how-to-build-an-fde-team.html",
+      "type": "Blog"
+    },
+    {
+      "title": "FDE Academy - Skills & Career",
+      "file": "fourth-age-fde-academy-skills-career.html",
+      "type": "Educational Resource"
+    },
+    {
+      "title": "Privacy and Governance Whitepaper",
+      "file": "fourth-age-privacy-and-governance-whitepaper.html",
+      "type": "Whitepaper"
+    }
+  ],
+  "unit8": [
+    {
+      "title": "Palantir Foundry Case Studies by Unit8",
+      "file": "unit8-palantir-foundry-case-studies-by-unit8.html",
+      "type": "Case Study Series"
+    },
+    {
+      "title": "Palantir Foundry 101",
+      "file": "unit8-palantir-foundry-101.html",
+      "type": "Guide"
+    },
+    {
+      "title": "Unit8 Palantir Services",
+      "file": "unit8-unit8-palantir-services.html",
+      "type": "Service Profile"
+    }
+  ],
+  "spr": [
+    {
+      "title": "Palantir Security Overview",
+      "file": "spr-palantir-security-overview.html",
+      "type": "Technical Guide"
+    },
+    {
+      "title": "Privacy and Governance Whitepaper",
+      "file": "spr-privacy-and-governance-whitepaper.html",
+      "type": "Whitepaper"
+    },
+    {
+      "title": "SPR Company Profile",
+      "file": "spr-spr-company-profile.html",
+      "type": "Profile"
+    }
+  ],
+  "rackspace": [
+    {
+      "title": "Rackspace & Palantir Partnership",
+      "file": "rackspace-rackspace-palantir-partnership.html",
+      "type": "Partnership Announcement"
+    },
+    {
+      "title": "Rackspace IR Release",
+      "file": "rackspace-rackspace-ir-release.html",
+      "type": "Official Release"
+    },
+    {
+      "title": "Privacy and Governance Whitepaper",
+      "file": "rackspace-privacy-and-governance-whitepaper.html",
+      "type": "Whitepaper"
+    }
+  ],
+  "accenture-federal": [
+    {
+      "title": "Accenture & Palantir Strategic Partnership",
+      "file": "accenture-federal-accenture-palantir-strategic-partnership.html",
+      "type": "Partnership Announcement"
+    },
+    {
+      "title": "Accenture + Palantir Services",
+      "file": "accenture-federal-accenture-palantir-services.html",
+      "type": "Service Profile"
+    },
+    {
+      "title": "Privacy and Governance Whitepaper",
+      "file": "accenture-federal-privacy-and-governance-whitepaper.html",
+      "type": "Whitepaper"
+    }
+  ],
+  "pvm": [
+    {
+      "title": "Understanding the Palantir Ontology",
+      "file": "pvm-understanding-the-palantir-ontology.html",
+      "type": "Blog"
+    },
+    {
+      "title": "PVM Foundry Services",
+      "file": "pvm-pvm-foundry-services.html",
+      "type": "Service Profile"
+    },
+    {
+      "title": "POL-INTEL: Law Enforcement Ontology",
+      "file": "pvm-pol-intel-law-enforcement-ontology.html",
+      "type": "Academic Case Study"
+    }
+  ],
+  "bigbear": [
+    {
+      "title": "BigBear.ai & Palantir Partnership",
+      "file": "bigbear-bigbearai-palantir-partnership.html",
+      "type": "Partnership Announcement"
+    },
+    {
+      "title": "BigBear.ai Solutions",
+      "file": "bigbear-bigbearai-solutions.html",
+      "type": "Product Catalog"
+    },
+    {
+      "title": "About BigBear.ai",
+      "file": "bigbear-about-bigbearai.html",
+      "type": "Company Profile"
+    }
+  ],
+  "gallatin": [
+    {
+      "title": "Gallatin AI Platform",
+      "file": "gallatin-gallatin-ai-platform.html",
+      "type": "Product Brief"
+    },
+    {
+      "title": "Palantir Security Overview",
+      "file": "gallatin-palantir-security-overview.html",
+      "type": "Technical Guide"
+    },
+    {
+      "title": "Privacy and Governance Whitepaper",
+      "file": "gallatin-privacy-and-governance-whitepaper.html",
+      "type": "Whitepaper"
+    }
+  ]
+}

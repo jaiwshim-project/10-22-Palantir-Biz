@@ -281,18 +281,18 @@ function renderCompanyDetail(company, companies) {
   try {
     const resourcesSection = document.getElementById('resources');
     if (resourcesSection) {
-      // 이 회사의 자료들의 글로벌 인덱스 계산
-      let globalResourceIdx = 1; // resources-analysis.html의 슬라이드는 1부터 시작
-      for (let c of companies) {
-        if (c.id < company.id) {
-          globalResourceIdx += c.resources.length * 10; // 각 자료마다 10장
-        } else {
-          break;
-        }
+      function sanitizeFilename(title) {
+        return title
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .replace(/-+/g, '-')
+          .substring(0, 40);
       }
 
       const resourcesHtml = company.resources.map((res, idx) => {
-        const resourcePitchdeckSlide = globalResourceIdx + (idx * 10);
+        const sanitizedTitle = sanitizeFilename(res.title);
+        const pitchdeckFile = `../${company.slug}-${sanitizedTitle}.html`;
         return `
           <div class="resource-card">
             <div class="resource-header">
@@ -302,7 +302,7 @@ function renderCompanyDetail(company, companies) {
             <p class="resource-description">${res.description}</p>
             <div style="display: flex; gap: 1rem; margin-top: 1rem;">
               <a href="${res.url}" target="_blank" class="resource-link">→ 자료 보기</a>
-              <a href="../resources-analysis.html?slide=${resourcePitchdeckSlide}"
+              <a href="${pitchdeckFile}"
                  style="display: inline-block; padding: 0.6rem 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9rem;">
                 📊 자료분석 피치덱
               </a>
