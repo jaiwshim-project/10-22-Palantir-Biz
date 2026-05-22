@@ -1,15 +1,11 @@
 // Load companies data
-let companiesData = [];
-
-async function loadCompanies() {
-  try {
-    const response = await fetch('./data/companies.json');
-    companiesData = await response.json();
-    renderCompanies(companiesData);
-    initFilters();
-  } catch (error) {
-    console.error('Error loading companies:', error);
+function loadCompanies() {
+  if (!window.companiesData) {
+    console.error('companiesData not loaded');
+    return;
   }
+  renderCompanies(window.companiesData);
+  initFilters();
 }
 
 // Render companies on main page
@@ -73,7 +69,7 @@ function applyFiltersAndSearch() {
 
   const searchTerm = searchInput?.value.toLowerCase() || '';
 
-  let filtered = companiesData;
+  let filtered = window.companiesData;
 
   // Apply priority filter
   if (activePriority && activePriority !== 'all') {
@@ -111,10 +107,7 @@ if (document.readyState === 'loading') {
 }
 
 // Utility: Find company by slug (for detail pages)
-async function getCompanyBySlug(slug) {
-  if (companiesData.length === 0) {
-    const response = await fetch('../data/companies.json');
-    companiesData = await response.json();
-  }
-  return companiesData.find(c => c.slug === slug);
+function getCompanyBySlug(slug) {
+  if (!window.companiesData) return null;
+  return window.companiesData.find(c => c.slug === slug);
 }
