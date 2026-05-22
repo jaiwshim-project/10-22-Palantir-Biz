@@ -43,6 +43,63 @@ function renderCompanyDetail(company) {
   website.href = company.website;
   website.textContent = company.website.replace('https://', '');
 
+  // Company Stats Section (NEW)
+  const statsHtml = `
+    <div class="company-stats-cards">
+      <div class="stat-card">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-value">Priority ${company.priority}</div>
+        <div class="stat-label">우선순위</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🎯</div>
+        <div class="stat-value">${company.strengths.length}</div>
+        <div class="stat-label">핵심 강점</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📊</div>
+        <div class="stat-value">${company.caseStudies.length}</div>
+        <div class="stat-label">성공 사례</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📚</div>
+        <div class="stat-value">${company.resources.length}</div>
+        <div class="stat-label">자료</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏢</div>
+        <div class="stat-value">${company.company_info.headquarters}</div>
+        <div class="stat-label">본사</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🌍</div>
+        <div class="stat-value">${company.company_info.regions.length}</div>
+        <div class="stat-label">운영 지역</div>
+      </div>
+    </div>
+
+    <div class="company-tech-skills">
+      <h3>기술 역량</h3>
+      <div class="skills-badges">
+        ${company.skills.map(skill => `<span class="skill-badge">${skill}</span>`).join('')}
+      </div>
+    </div>
+
+    <div class="company-industries">
+      <h3>주요 산업</h3>
+      <div class="industry-badges">
+        ${company.industries.map(industry => `<span class="industry-badge">${industry}</span>`).join('')}
+      </div>
+    </div>
+
+    <div class="company-info-bar">
+      <span>📍 ${company.company_info.headquarters}</span>
+      <span>🏢 ${company.company_info.employees}</span>
+      <span>📅 ${company.company_info.founded}</span>
+    </div>
+  `;
+  document.getElementById('companyStats').innerHTML = statsHtml;
+
   // What They Do
   document.getElementById('whatTheyDo').innerHTML = `<p>${company.whatTheyDo}</p>`;
 
@@ -126,6 +183,27 @@ function renderCompanyDetail(company) {
     </div>
   `;
   document.getElementById('relatedCompanies').innerHTML = relatedHtml;
+
+  // Page Navigation (NEW) - Previous/Next buttons
+  const prevCompany = companies.find(c => c.id === company.id - 1);
+  const nextCompany = companies.find(c => c.id === company.id + 1);
+
+  const pageNavHtml = `
+    <div class="page-navigation">
+      ${prevCompany ? `<a href="./${prevCompany.slug}.html" class="nav-btn prev-btn">← ${prevCompany.name}</a>` : '<span></span>'}
+      <div class="page-indicator">
+        <span class="current-page">${company.id}/10</span>
+        <span class="page-progress">
+          <div class="progress-bar" style="width: ${(company.id / 10) * 100}%"></div>
+        </span>
+      </div>
+      ${nextCompany ? `<a href="./${nextCompany.slug}.html" class="nav-btn next-btn">${nextCompany.name} →</a>` : '<span></span>'}
+    </div>
+  `;
+
+  // Insert page navigation after relatedCompanies
+  const relatedSection = document.getElementById('relatedCompanies');
+  relatedSection.insertAdjacentHTML('afterend', pageNavHtml);
 }
 
 // Load on page ready

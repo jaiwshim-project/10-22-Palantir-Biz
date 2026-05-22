@@ -24,6 +24,24 @@
     "targetMarket": "대형 기업, 정부기관, 금융기관",
     "priority": 1,
     "relevanceToSB": "대표님 비즈니스 모델의 최고 수준의 벤치마킹 대상. 전직 인력과 구현 방식이 가장 직접적인 참고 사례.",
+    "company_info": {
+      "founded": "2010년대",
+      "headquarters": "USA",
+      "regions": ["North America", "Europe"],
+      "employees": "100-500"
+    },
+    "skills": [
+      "Foundry",
+      "AIP",
+      "Ontology",
+      "High Availability",
+      "Pipeline Engineering"
+    ],
+    "industries": [
+      "Finance",
+      "Defense",
+      "Government"
+    ],
     "caseStudies": [
       {
         "title": "금융 기관 Foundry 구축 및 운영 시스템 개발",
@@ -88,6 +106,24 @@
     "targetMarket": "중견·대기업, 산업별 디지털 혁신 기업",
     "priority": 1,
     "relevanceToSB": "대표님의 VCOS/AX Ontology OS와 가장 유사한 시장 포지셔닝. 생산 배포 중심의 운영 방식이 매우 참고할 만함.",
+    "company_info": {
+      "founded": "2010년대",
+      "headquarters": "USA",
+      "regions": ["North America"],
+      "employees": "100-500"
+    },
+    "skills": [
+      "Foundry",
+      "AIP",
+      "Rapid Deployment",
+      "Pipeline Engineering",
+      "ROI Optimization"
+    ],
+    "industries": [
+      "Finance",
+      "Enterprise",
+      "Tech"
+    ],
     "caseStudies": [
       {
         "title": "소매유통 공급망 최적화 AI 시스템 - 8주 완성",
@@ -152,6 +188,25 @@
     "targetMarket": "대형 기업, 디지털 혁신이 필요한 중견기업",
     "priority": 1,
     "relevanceToSB": "대표님의 AX 실행팀 모델 설계에 매우 좋은 참고 사례. FDE 개념 자체가 대표님의 비즈니스 운영 방식과 부합.",
+    "company_info": {
+      "founded": "2010년대",
+      "headquarters": "USA",
+      "regions": ["North America", "Europe"],
+      "employees": "100-500"
+    },
+    "skills": [
+      "FDE",
+      "Data Strategy",
+      "Architecture",
+      "Pipeline Engineering",
+      "Change Management"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Enterprise",
+      "Life Sciences",
+      "Energy"
+    ],
     "caseStudies": [
       {
         "title": "제약회사 임상 데이터 분석 센터 - FDE 18개월 배치",
@@ -222,6 +277,25 @@
     "targetMarket": "유럽 대기업, 규제·컴플라이언스가 중요한 기업",
     "priority": 2,
     "relevanceToSB": "산업별 AX 서비스 패키지 설계에 좋은 참고. 유럽의 데이터 거버넌스 문화를 한국 시장에 맞게 해석할 수 있는 힌트 제공.",
+    "company_info": {
+      "founded": "2010년대",
+      "headquarters": "Switzerland",
+      "regions": ["Europe", "North America"],
+      "employees": "100-500"
+    },
+    "skills": [
+      "Foundry",
+      "GDPR Compliance",
+      "Data Strategy",
+      "Governance",
+      "Industry Solutions"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Finance",
+      "Healthcare",
+      "Energy"
+    ],
     "caseStudies": [
       {
         "title": "스위스 은행 GDPR 준수 데이터 거버넌스 - Foundry 구축",
@@ -286,6 +360,24 @@
     "targetMarket": "정부·공공기관, 금융기관, 대형 기업",
     "priority": 2,
     "relevanceToSB": "중견·대기업 및 공공기관 AX 제안서 구조에 참고하기 좋음. 보안·거버넌스 메시지를 강조하는 한국 공공시장 제안에 유용.",
+    "company_info": {
+      "founded": "2000년대",
+      "headquarters": "USA",
+      "regions": ["North America"],
+      "employees": "500+"
+    },
+    "skills": [
+      "Foundry",
+      "Security",
+      "Governance",
+      "Migration",
+      "Compliance"
+    ],
+    "industries": [
+      "Government",
+      "Defense",
+      "Finance"
+    ],
     "caseStudies": [
       {
         "title": "미 연방정부 기관 보안 데이터 통합 플랫폼",
@@ -350,6 +442,24 @@
     "targetMarket": "클라우드 친화적 대기업, 운영 부담을 덜고 싶은 중견기업",
     "priority": 2,
     "relevanceToSB": "대표님이 AX 플랫폼을 SaaS+운영대행으로 판매할 때 참고할 수 있는 좋은 모델. 고객 입장에서 '구축 후 운영 부담'을 완전히 없애주는 서비스 포지셔닝.",
+    "company_info": {
+      "founded": "1990년대",
+      "headquarters": "USA",
+      "regions": ["North America", "Europe", "Asia Pacific"],
+      "employees": "500+"
+    },
+    "skills": [
+      "Cloud Operations",
+      "Managed Services",
+      "Infrastructure",
+      "SaaS Model",
+      "Support"
+    ],
+    "industries": [
+      "Enterprise",
+      "Finance",
+      "Tech"
+    ],
     "caseStudies": [
       {
         "title": "글로벌 기업 Foundry 관리형 운영 서비스",
@@ -414,6 +524,23 @@
     "targetMarket": "미 연방정부 기관, 공공 조직, 규제 기관",
     "priority": 2,
     "relevanceToSB": "한국 공공기관·지자체·국방 분야 제안에 참고할 수 있음. 대형 컨설팅사와의 협업 구조를 이해하는 데 유용.",
+    "company_info": {
+      "founded": "2000년대",
+      "headquarters": "USA",
+      "regions": ["North America"],
+      "employees": "500+"
+    },
+    "skills": [
+      "Consulting",
+      "Change Management",
+      "AI Training",
+      "Governance",
+      "Public Sector"
+    ],
+    "industries": [
+      "Government",
+      "Public Sector"
+    ],
     "caseStudies": [
       {
         "title": "미 연방 기관 AI 의사결정 시스템 도입",
@@ -478,6 +605,24 @@
     "targetMarket": "미 공공기관, 정보기관, 법집행기관, 공공 안보 조직",
     "priority": 2,
     "relevanceToSB": "한국 공공 AX, 선거·행정 데이터 플랫폼에 참고할 만한 장기 운영 모델. 온톨로지 설계 방법론도 학습 가치 높음.",
+    "company_info": {
+      "founded": "2000년대",
+      "headquarters": "USA",
+      "regions": ["North America"],
+      "employees": "100-500"
+    },
+    "skills": [
+      "Ontology Design",
+      "Investigation Workflows",
+      "Long-term Operations",
+      "Foundry",
+      "Government Solutions"
+    ],
+    "industries": [
+      "Government",
+      "Law Enforcement",
+      "Intelligence"
+    ],
     "caseStudies": [
       {
         "title": "법집행기관 조사 정보 통합 플랫폼 - 6년 장기 운영",
@@ -542,6 +687,24 @@
     "targetMarket": "방산·물류·에너지 등 특정 산업의 대형 조직",
     "priority": 3,
     "relevanceToSB": "대표님의 '산업별 솔루션 확장' 전략과 유사한 모델. AX Dental, AX Election, Fire Navi 같은 산업별 솔루션을 플랫폼 위에 구축하는 방식과 부합.",
+    "company_info": {
+      "founded": "2010년대",
+      "headquarters": "USA",
+      "regions": ["North America"],
+      "employees": "100-500"
+    },
+    "skills": [
+      "AI Products",
+      "Predictive Analytics",
+      "Industry-specific Apps",
+      "Foundry",
+      "Product Development"
+    ],
+    "industries": [
+      "Defense",
+      "Logistics",
+      "Energy"
+    ],
     "caseStudies": [
       {
         "title": "국방부 공급망 최적화 AI 플랫폼",
@@ -606,6 +769,24 @@
     "targetMarket": "국방부, 작전 기관, 군 지휘부",
     "priority": 3,
     "relevanceToSB": "대표님의 'AX Ontology OS + 산업별 앱' 구조와 가장 유사. Ontology SDK 기반 외부 애플리케이션 연결 방식이 정확히 대표님의 비전과 부합.",
+    "company_info": {
+      "founded": "2010년대",
+      "headquarters": "USA",
+      "regions": ["North America"],
+      "employees": "100-500"
+    },
+    "skills": [
+      "Ontology SDK",
+      "Defense Operations",
+      "Real-time Analysis",
+      "Foundry Integration",
+      "Platform Architecture"
+    ],
+    "industries": [
+      "Defense",
+      "Military",
+      "Operations"
+    ],
     "caseStudies": [
       {
         "title": "연합군 작전 의사결정 지원 시스템",
