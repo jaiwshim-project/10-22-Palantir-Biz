@@ -580,3 +580,18 @@ footer p {
   color: var(--primary);
   transform: translateX(4px);
 }
+
+/* Search Input */
+input[type="text"] {
+  transition: all var(--transition);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+input[type="text"]::placeholder {
+  color: var(--gray-400);
+}

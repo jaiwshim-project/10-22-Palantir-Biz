@@ -33,8 +33,17 @@
 
   <!-- Main Content -->
   <div class="container" id="companies">
-    <!-- Filter Section -->
+    <!-- Search & Filter Section -->
     <div style="margin-bottom: 2rem;">
+      <div style="margin-bottom: 1.5rem;">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="회사명, 산업, 서비스 검색... (예: Foundry, 금융, FDE)"
+          style="width: 100%; padding: 0.8rem 1rem; border: 2px solid var(--gray-300); border-radius: var(--border-radius); font-size: 1rem;"
+        >
+      </div>
+
       <h2 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--primary);">우선순위별 필터</h2>
       <div class="filter-bar">
         <button class="filter-btn active" data-priority="all">모두 보기 (10)</button>

@@ -44,21 +44,63 @@ function renderCompanies(companies) {
 // Initialize filters
 function initFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
+  const searchInput = document.getElementById('searchInput');
 
+  // Priority filter
   filterBtns.forEach(btn => {
     btn.addEventListener('click', function() {
       filterBtns.forEach(b => b.classList.remove('active'));
       this.classList.add('active');
 
-      const priority = this.dataset.priority;
-      if (priority === 'all') {
-        renderCompanies(companiesData);
-      } else {
-        const filtered = companiesData.filter(c => c.priority == priority);
-        renderCompanies(filtered);
-      }
+      applyFiltersAndSearch();
     });
   });
+
+  // Search filter
+  if (searchInput) {
+    searchInput.addEventListener('input', applyFiltersAndSearch);
+  }
+}
+
+// Combined filter & search logic
+function applyFiltersAndSearch() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const searchInput = document.getElementById('searchInput');
+
+  const activePriority = Array.from(filterBtns)
+    .find(btn => btn.classList.contains('active'))
+    ?.dataset.priority;
+
+  const searchTerm = searchInput?.value.toLowerCase() || '';
+
+  let filtered = companiesData;
+
+  // Apply priority filter
+  if (activePriority && activePriority !== 'all') {
+    filtered = filtered.filter(c => c.priority == activePriority);
+  }
+
+  // Apply search filter
+  if (searchTerm) {
+    filtered = filtered.filter(company => {
+      const searchFields = [
+        company.name,
+        company.type,
+        company.tagline,
+        company.whatTheyDo,
+        ...(company.solutions || []),
+        ...(company.strengths || []),
+        company.differentiation,
+        company.targetMarket
+      ];
+
+      return searchFields.some(field =>
+        field && field.toLowerCase().includes(searchTerm)
+      );
+    });
+  }
+
+  renderCompanies(filtered);
 }
 
 // Load on DOM ready
