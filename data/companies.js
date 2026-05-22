@@ -65,22 +65,22 @@ window.companiesData = [
     ],
     "resources": [
       {
-        "title": "Palantir Foundry 구현 Best Practices",
+        "title": "Vanguard Elite Partner Recognition",
+        "type": "News",
+        "url": "https://www.businesswire.com/news/home/20251204291274/en/Northslope-Signs-Large-Scale-Expansion-for-Deployment-of-Palantir-AI-FDE-and-Demonstrates-Accelerated-Growth-Palantir-Recognizes-Northslope-as-the-First-Partner-of-the-Vanguard-Elite",
+        "description": "Palantir 공식 파트너 Elite 등급 인정"
+      },
+      {
+        "title": "Privacy and Governance Whitepaper",
         "type": "Whitepaper",
-        "url": "https://www.northslope.com/",
-        "description": "Northslope의 Foundry 구현 경험 및 모범 사례"
+        "url": "https://www.palantir.com/assets/xrfr7uokpv1b/6pey1VnYHULqeggNbPKqP0/9f577de3e3dfb9fc031bd75dc7526517/Palantir_Privacy_and_Governance_Whitepaper__1_.pdf",
+        "description": "Palantir의 데이터 프라이버시 및 거버넌스 전략"
       },
       {
-        "title": "엔터프라이즈 데이터 아키텍처 설계 가이드",
-        "type": "Blog",
-        "url": "https://www.northslope.com/",
-        "description": "Foundry 기반 데이터 아키텍처의 핵심 원칙"
-      },
-      {
-        "title": "고가용성 Foundry 운영 시스템",
-        "type": "Case Study",
-        "url": "https://www.northslope.com/",
-        "description": "금융·방위산업에서의 Foundry 운영 사례"
+        "title": "Operational Complexity Whitepaper",
+        "type": "Whitepaper",
+        "url": "https://www.palantir.com/assets/xrfr7uokpv1b/5plfYze5aVCisYHuvLhDZ2/c6713af4b4c5fff5a73b5e1683302898/Palantir_Operational_Complexity_Whitepaper_FINAL.pdf",
+        "description": "Foundry로 운영 복잡성 극복"
       }
     ]
   },
@@ -149,22 +149,22 @@ window.companiesData = [
     ],
     "resources": [
       {
-        "title": "빠른 배포 방법론 - Strategy to Operations in Weeks",
+        "title": "10x Partners About Page",
+        "type": "Profile",
+        "url": "https://10x-partners.com/about",
+        "description": "ex-Palantirians 팀 구성 및 핵심 역량"
+      },
+      {
+        "title": "How Palantir Enables Rapid Development",
+        "type": "Blog",
+        "url": "https://blog.palantir.com/how-palantir-enables-a-secure-rapid-software-development-environment-2f918b021568",
+        "description": "Palantir 블로그 - 빠른 배포 방식"
+      },
+      {
+        "title": "Privacy and Governance Whitepaper",
         "type": "Whitepaper",
-        "url": "https://www.10x-partners.com/",
-        "description": "10x Partners의 4-8주 배포 프레임워크"
-      },
-      {
-        "title": "AIP 기반 의사결정 시스템 구축 사례",
-        "type": "Blog Series",
-        "url": "https://www.10x-partners.com/",
-        "description": "실제 운영 중인 AIP 의사결정 시스템"
-      },
-      {
-        "title": "Foundry 파이프라인 엔지니어링 마스터클래스",
-        "type": "Webinar",
-        "url": "https://www.10x-partners.com/",
-        "description": "데이터 파이프라인 설계부터 배포까지"
+        "url": "https://www.palantir.com/assets/xrfr7uokpv1b/6pey1VnYHULqeggNbPKqP0/9f577de3e3dfb9fc031bd75dc7526517/Palantir_Privacy_and_Governance_Whitepaper__1_.pdf",
+        "description": "Palantir의 거버넌스 전략"
       }
     ]
   },
@@ -235,28 +235,28 @@ window.companiesData = [
     ],
     "resources": [
       {
-        "title": "Forward Deployed Engineer 모델 백서",
-        "type": "Whitepaper",
-        "url": "https://www.fourthage.com/",
-        "description": "FDE 방식의 원리와 성공 요인"
-      },
-      {
-        "title": "장기 디지털 전환을 위한 데이터 전략",
-        "type": "Case Study",
-        "url": "https://www.fourthage.com/",
-        "description": "18개월 FDE 배치를 통한 전환 여정"
-      },
-      {
-        "title": "FDE 팀 배치의 ROI 측정 프레임워크",
+        "title": "What is a Forward Deployed Engineer?",
         "type": "Blog",
-        "url": "https://www.fourthage.com/",
-        "description": "FDE 모델의 비용 효과성 측정 방법"
+        "url": "https://fourthage.substack.com/p/what-is-a-forward-deployed-engineer",
+        "description": "FDE 개념과 Fourth Age의 접근 방식"
       },
       {
-        "title": "데이터 문화 정착 가이드",
-        "type": "Video Series",
-        "url": "https://www.fourthage.com/",
-        "description": "조직 변화와 데이터 문화 정착"
+        "title": "How to Build an FDE Team",
+        "type": "Blog",
+        "url": "https://fourthage.substack.com/p/how-to-build-an-fde-team",
+        "description": "FDE 팀 구성 및 운영 전략"
+      },
+      {
+        "title": "FDE Academy - Skills & Career",
+        "type": "Educational Resource",
+        "url": "https://fde.academy/",
+        "description": "Forward Deployed Engineer 역할 및 교육"
+      },
+      {
+        "title": "Privacy and Governance Whitepaper",
+        "type": "Whitepaper",
+        "url": "https://www.palantir.com/assets/xrfr7uokpv1b/6pey1VnYHULqeggNbPKqP0/9f577de3e3dfb9fc031bd75dc7526517/Palantir_Privacy_and_Governance_Whitepaper__1_.pdf",
+        "description": "Palantir 거버넌스 가이드"
       }
     ]
   },
@@ -327,22 +327,22 @@ window.companiesData = [
     ],
     "resources": [
       {
-        "title": "GDPR 준수 데이터 거버넌스 설계 가이드",
-        "type": "Whitepaper",
-        "url": "https://unit8.com/",
-        "description": "Foundry 기반 규제 준수 데이터 아키텍처"
-      },
-      {
-        "title": "산업별 데이터 솔루션 - 제조, 금융, 헬스케어, 에너지",
-        "type": "Product Brief",
-        "url": "https://unit8.com/",
-        "description": "Unit8의 산업별 맞춤형 데이터 솔루션"
-      },
-      {
-        "title": "유럽 기업의 디지털 전환 성공 사례",
+        "title": "Palantir Foundry Case Studies by Unit8",
         "type": "Case Study Series",
-        "url": "https://unit8.com/",
-        "description": "GDPR 규제 환경에서의 실제 성과"
+        "url": "https://unit8.com/resources/palantir-foundry-case-studies-by-unit8/",
+        "description": "65개+ 실제 Foundry 구현 사례"
+      },
+      {
+        "title": "Palantir Foundry 101",
+        "type": "Guide",
+        "url": "https://unit8.com/resources/palantir-foundry-101-2/",
+        "description": "Foundry 입문자를 위한 기초 가이드"
+      },
+      {
+        "title": "Unit8 Palantir Services",
+        "type": "Service Profile",
+        "url": "https://unit8.com/services/palantir-foundry-services/",
+        "description": "Unit8의 Foundry 전문 서비스"
       }
     ]
   },
@@ -411,22 +411,22 @@ window.companiesData = [
     ],
     "resources": [
       {
-        "title": "정부급 보안 데이터 거버넌스 백서",
-        "type": "Whitepaper",
-        "url": "https://spr.com/",
-        "description": "정부·공공기관 데이터 보안의 핵심 요구사항"
-      },
-      {
-        "title": "규제 준수 데이터 아키텍처 설계",
+        "title": "Palantir Security Overview",
         "type": "Technical Guide",
-        "url": "https://spr.com/",
-        "description": "금융·공공기관의 규제 요구사항 구현"
+        "url": "https://www.palantir.com/docs/foundry/security/overview",
+        "description": "FedRAMP 및 연방 보안 표준"
       },
       {
-        "title": "대규모 데이터 마이그레이션 성공 사례",
-        "type": "Case Study",
-        "url": "https://spr.com/",
-        "description": "여러 기관·시스템의 데이터 통합"
+        "title": "Privacy and Governance Whitepaper",
+        "type": "Whitepaper",
+        "url": "https://www.palantir.com/assets/xrfr7uokpv1b/6pey1VnYHULqeggNbPKqP0/9f577de3e3dfb9fc031bd75dc7526517/Palantir_Privacy_and_Governance_Whitepaper__1_.pdf",
+        "description": "정부급 데이터 거버넌스"
+      },
+      {
+        "title": "SPR Company Profile",
+        "type": "Profile",
+        "url": "https://www.spr.com/",
+        "description": "SPR의 정부급 보안 역량"
       }
     ]
   },
@@ -497,22 +497,22 @@ window.companiesData = [
     ],
     "resources": [
       {
-        "title": "Managed Foundry 운영 모델",
-        "type": "Datasheet",
-        "url": "https://www.rackspace.com/",
-        "description": "Rackspace의 관리형 Foundry/AIP 운영"
+        "title": "Rackspace & Palantir Partnership",
+        "type": "Partnership Announcement",
+        "url": "https://www.rackspace.com/newsroom/strategic-partnership-palantir",
+        "description": "Foundry/AIP 관리형 운영 서비스"
       },
       {
-        "title": "클라우드 기반 데이터 플랫폼 운영 가이드",
+        "title": "Rackspace IR Release",
+        "type": "Official Release",
+        "url": "https://ir.rackspace.com/news-releases/news-release-details/rackspace-and-palantir-partner-run-foundry-and-aip-production",
+        "description": "프로덕션급 Foundry 관리형 운영"
+      },
+      {
+        "title": "Privacy and Governance Whitepaper",
         "type": "Whitepaper",
-        "url": "https://www.rackspace.com/",
-        "description": "AWS, Azure, GCP 환경에서의 안정적 운영"
-      },
-      {
-        "title": "SLA 기반 Foundry 운영 사례",
-        "type": "Case Study",
-        "url": "https://www.rackspace.com/",
-        "description": "99.99% 가용성을 보장하는 운영 성과"
+        "url": "https://www.palantir.com/assets/xrfr7uokpv1b/6pey1VnYHULqeggNbPKqP0/9f577de3e3dfb9fc031bd75dc7526517/Palantir_Privacy_and_Governance_Whitepaper__1_.pdf",
+        "description": "클라우드 거버넌스 가이드"
       }
     ]
   },
@@ -580,22 +580,22 @@ window.companiesData = [
     ],
     "resources": [
       {
-        "title": "공공기관 AI 도입 가이드",
-        "type": "Report",
-        "url": "https://www.accenturefederal.com/",
-        "description": "미 연방정부의 AI 도입 전략"
+        "title": "Accenture & Palantir Strategic Partnership",
+        "type": "Partnership Announcement",
+        "url": "https://newsroom.accenture.com/news/2025/palantir-and-accenture-federal-services-join-forces-to-help-federal-government-agencies-reinvent-operations-with-ai",
+        "description": "미 연방정부 AI 현대화 파트너십"
       },
       {
-        "title": "공무원 AI 교육 프로그램",
-        "type": "Course",
-        "url": "https://www.accenturefederal.com/",
-        "description": "공무원을 위한 AI 기본·심화 교육"
+        "title": "Accenture + Palantir Services",
+        "type": "Service Profile",
+        "url": "https://www.accenture.com/us-en/services/ecosystem-partners/palantir",
+        "description": "Accenture Federal의 Palantir 역량"
       },
       {
-        "title": "정부 부처 AI 혁신 사례집",
-        "type": "Case Study Series",
-        "url": "https://www.accenturefederal.com/",
-        "description": "미 연방정부의 AI 도입 성공 사례"
+        "title": "Privacy and Governance Whitepaper",
+        "type": "Whitepaper",
+        "url": "https://www.palantir.com/assets/xrfr7uokpv1b/6pey1VnYHULqeggNbPKqP0/9f577de3e3dfb9fc031bd75dc7526517/Palantir_Privacy_and_Governance_Whitepaper__1_.pdf",
+        "description": "공공기관 거버넌스"
       }
     ]
   },
@@ -664,22 +664,22 @@ window.companiesData = [
     ],
     "resources": [
       {
-        "title": "온톨로지 설계 가이드 - 정보기관 사례",
-        "type": "Technical Manual",
-        "url": "https://www.pvmit.com/",
-        "description": "PVM의 온톨로지 설계 방법론"
+        "title": "Understanding the Palantir Ontology",
+        "type": "Blog",
+        "url": "https://blog.pvmit.com/pvm-blog/palantir-ontology",
+        "description": "Palantir 온톨로지 개념 설명"
       },
       {
-        "title": "장기 운영 모델 - Foundry를 5년 이상 운영하기",
-        "type": "Whitepaper",
-        "url": "https://www.pvmit.com/",
-        "description": "정부 기관에서의 안정적 장기 운영 전략"
+        "title": "PVM Foundry Services",
+        "type": "Service Profile",
+        "url": "https://www.pvmit.com/services/palantir-foundry-services",
+        "description": "PVM의 Foundry 구현 및 운영"
       },
       {
-        "title": "조사·정보분석 워크플로우 설계",
-        "type": "Case Study",
-        "url": "https://www.pvmit.com/",
-        "description": "법집행기관의 조사 프로세스 디지털화"
+        "title": "POL-INTEL: Law Enforcement Ontology",
+        "type": "Academic Case Study",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/1369118X.2024.2410255",
+        "description": "덴마크 경찰청의 Palantir 온톨로지 실제 운영 사례"
       }
     ]
   },
@@ -748,22 +748,22 @@ window.companiesData = [
     ],
     "resources": [
       {
-        "title": "Foundry 위에 AI 제품 구축하기",
-        "type": "Tech Blog",
-        "url": "https://bigbear.ai/",
-        "description": "BigBear.ai의 AI 제품 개발 방식"
+        "title": "BigBear.ai & Palantir Partnership",
+        "type": "Partnership Announcement",
+        "url": "https://bigbear.ai/newsroom/bigbear-ai-and-palantir-announce-strategic-partnership-combining-ai-powered-products-with-next-generation-operating-platform/",
+        "description": "AI 제품과 Foundry 통합"
       },
       {
-        "title": "산업별 AI 솔루션 카탈로그",
+        "title": "BigBear.ai Solutions",
         "type": "Product Catalog",
-        "url": "https://bigbear.ai/",
-        "description": "방산, 물류, 에너지 분야의 AI 제품"
+        "url": "https://bigbear.ai/solutions/",
+        "description": "의사결정 AI 솔루션"
       },
       {
-        "title": "의사결정 AI 플랫폼 구축 가이드",
-        "type": "Whitepaper",
-        "url": "https://bigbear.ai/",
-        "description": "AI 기반 의사결정 시스템 설계"
+        "title": "About BigBear.ai",
+        "type": "Company Profile",
+        "url": "https://bigbear.ai/about/",
+        "description": "BigBear.ai의 기술 및 미션"
       }
     ]
   },
@@ -832,28 +832,22 @@ window.companiesData = [
     ],
     "resources": [
       {
-        "title": "Ontology SDK 기반 애플리케이션 개발 가이드",
-        "type": "Developer Guide",
+        "title": "Gallatin AI Platform",
+        "type": "Product Brief",
         "url": "https://www.gallatin.ai/",
-        "description": "Gallatin AI의 Ontology SDK 활용 방식"
+        "description": "국방 작전 지원 AI 플랫폼"
       },
       {
-        "title": "국방 온톨로지 설계 및 구현",
-        "type": "Technical Document",
-        "url": "https://www.gallatin.ai/",
-        "description": "작전 데이터를 온톨로지로 모델링"
+        "title": "Palantir Security Overview",
+        "type": "Technical Guide",
+        "url": "https://www.palantir.com/docs/foundry/security/overview",
+        "description": "Foundry 보안 & 온톨로지 아키텍처"
       },
       {
-        "title": "Foundry+Gallatin AI 통합 사례",
-        "type": "Case Study",
-        "url": "https://www.gallatin.ai/",
-        "description": "외부 애플리케이션을 Foundry와 통합"
-      },
-      {
-        "title": "실시간 의사결정 지원 시스템 아키텍처",
-        "type": "Architecture Document",
-        "url": "https://www.gallatin.ai/",
-        "description": "작전 환경에서의 실시간 의사결정 AI"
+        "title": "Privacy and Governance Whitepaper",
+        "type": "Whitepaper",
+        "url": "https://www.palantir.com/assets/xrfr7uokpv1b/6pey1VnYHULqeggNbPKqP0/9f577de3e3dfb9fc031bd75dc7526517/Palantir_Privacy_and_Governance_Whitepaper__1_.pdf",
+        "description": "Palantir 보안 및 거버넌스"
       }
     ]
   }
