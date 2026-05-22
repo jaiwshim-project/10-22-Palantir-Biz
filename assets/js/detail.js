@@ -81,6 +81,28 @@ function renderCompanyDetail(company, companies) {
   }
   console.log('[RENDER] Website link set');
 
+  // Pitchdeck Button
+  try {
+    const pitchdeckSlideMap = {
+      1: 4, 2: 5, 3: 6, 4: 7, 5: 9,
+      6: 10, 7: 11, 8: 12, 9: 14, 10: 14
+    };
+    const pitchdeckSlide = pitchdeckSlideMap[company.id];
+    const pitchdeckLink = document.createElement('div');
+    pitchdeckLink.style.textAlign = 'center';
+    pitchdeckLink.style.marginTop = '1.5rem';
+    pitchdeckLink.innerHTML = `
+      <a href="../palantir-ecosystem-analysis.html?slide=${pitchdeckSlide}"
+         style="display: inline-block; padding: 0.8rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; font-size: 1rem;">
+        📊 피치덱에서 종합 분석 보기
+      </a>
+    `;
+    website.parentElement.insertAdjacentElement('afterend', pitchdeckLink);
+    console.log('[RENDER] Pitchdeck button added for slide', pitchdeckSlide);
+  } catch (e) {
+    console.error('[ERROR] Failed to add pitchdeck button:', e);
+  }
+
   // Company Stats Section
   try {
     const statsSection = document.getElementById('companyStats');
