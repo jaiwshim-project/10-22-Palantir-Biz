@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "name": "Northslope Technologies",
+    "slug": "northslope",
+    "type": "Specialized Services Firm",
+    "website": "https://www.northslope.com/",
+    "tagline": "Palantir Ecosystem Experts",
+    "whatTheyDo": "Northslope는 전직 Palantir 인력을 중심으로 구성된 전문 서비스 회사로, Palantir의 공식 서비스 파트너입니다. Foundry와 AIP의 개발·구현·운영을 통해 고객의 데이터 기반 의사결정 체계를 구축합니다.",
+    "solutions": [
+      "Palantir Foundry 구현 및 운영",
+      "Palantir AIP (Artificial Intelligence Platform) 배포",
+      "데이터 통합 및 온톨로지 설계",
+      "엔터프라이즈 데이터 아키텍처",
+      "AI/ML 파이프라인 구축"
+    ],
+    "strengths": [
+      "전직 Palantir 엔지니어들의 깊은 플랫폼 이해",
+      "Foundry 기반 엔드-투-엔드 프로젝트 경험",
+      "고가용성 운영 시스템 구축 역량",
+      "공식 파트너로서 Palantir와의 직접 협력"
+    ],
+    "differentiation": "가장 직접적인 Palantir 경험을 보유. 전직 팔란티어 엔지니어들이 고객의 Foundry/AIP ROI를 극대화하는 데 집중.",
+    "targetMarket": "대형 기업, 정부기관, 금융기관",
+    "priority": 1,
+    "relevanceToSB": "대표님 비즈니스 모델의 최고 수준의 벤치마킹 대상. 전직 인력과 구현 방식이 가장 직접적인 참고 사례."
+  },
+  {
+    "id": 2,
+    "name": "10x Partners",
+    "slug": "10x-partners",
+    "type": "Palantir Foundry/AIP Specialist Consulting",
+    "website": "https://www.10x-partners.com/",
+    "tagline": "Strategy to Operations in Weeks",
+    "whatTheyDo": "10x Partners는 전직 Palantir 엔지니어들을 기반으로 한 컨설팅 회사로, 전략적 데이터 설계부터 운영 배포까지 빠른 실행에 중점을 두고 있습니다. 기업의 의사결정 체계를 AIP 기반으로 전환합니다.",
+    "solutions": [
+      "엔드-투-엔드 데이터 파이프라인 설계 및 구현",
+      "Palantir Foundry 기반 애플리케이션 개발",
+      "Palantir AIP 운영 교육 및 거버넌스",
+      "데이터 아키텍처 컨설팅",
+      "AI 의사결정 시스템 구축"
+    ],
+    "strengths": [
+      "몇 주 안에 운영 배포 가능한 실행 속도",
+      "ROI 극대화에 집중하는 컨설팅 방향",
+      "ex-Palantirian engineers의 깊은 기술 이해",
+      "생산 환경 중심의 프로젝트 운영"
+    ],
+    "differentiation": "전략을 현실로 만드는 빠른 운영 배포 중심. ROI 메시지가 강하고, 기업의 실질적 의사결정 변화를 목표로 함.",
+    "targetMarket": "중견·대기업, 산업별 디지털 혁신 기업",
+    "priority": 1,
+    "relevanceToSB": "대표님의 VCOS/AX Ontology OS와 가장 유사한 시장 포지셔닝. 생산 배포 중심의 운영 방식이 매우 참고할 만함."
+  },
+  {
+    "id": 3,
+    "name": "Fourth Age",
+    "slug": "fourth-age",
+    "type": "Forward Deployed Engineer Specialist",
+    "website": "https://www.fourthage.com/",
+    "tagline": "Digital Transformation Through FDE Model",
+    "whatTheyDo": "Fourth Age는 Forward Deployed Engineer(FDE) 팀을 고객사에 배치하여 데이터·AI 전략부터 장기 운영까지 책임지는 현장 밀착형 디지털 전환 회사입니다. Palantir Foundry/AIP 공식 지원 파트너.",
+    "solutions": [
+      "Forward Deployed Engineer 팀 배치",
+      "데이터·AI 전략 수립",
+      "데이터 아키텍처 설계",
+      "데이터 엔지니어링",
+      "장기 운영 지원 및 교육"
+    ],
+    "strengths": [
+      "FDE 방식을 서비스 모델로 전면화",
+      "고객 현장에 상주하면서 장기적 파트너십 구축",
+      "실제 비즈니스 변화를 주도하는 역할",
+      "데이터 문화 정착까지 지원하는 종합성"
+    ],
+    "differentiation": "Palantir의 FDE 문화를 그대로 서비스화. 단순 컨설팅이 아니라 팀 배치를 통한 장기 현장 밀착형 지원이 핵심.",
+    "targetMarket": "대형 기업, 디지털 혁신이 필요한 중견기업",
+    "priority": 1,
+    "relevanceToSB": "대표님의 AX 실행팀 모델 설계에 매우 좋은 참고 사례. FDE 개념 자체가 대표님의 비즈니스 운영 방식과 부합."
+  },
+  {
+    "id": 4,
+    "name": "Unit8",
+    "slug": "unit8",
+    "type": "Data & AI Consulting (European)",
+    "website": "https://unit8.com/services/palantir-foundry-services/",
+    "tagline": "European Data & AI Excellence",
+    "whatTheyDo": "스위스 기반 Unit8은 데이터·AI 컨설팅 회사로, Palantir certified partner 자격으로 Foundry/AIP 서비스를 제공합니다. 유럽형 데이터 컨설팅의 엄밀함과 Palantir 플랫폼을 결합한 종합 서비스.",
+    "solutions": [
+      "Palantir Foundry 서비스",
+      "데이터·AI 컨설팅",
+      "플랫폼 구축 및 운영",
+      "GenAI 서비스",
+      "산업별 데이터 솔루션 (제조, 금융, 헬스케어, 에너지)"
+    ],
+    "strengths": [
+      "유럽 기준의 높은 데이터 거버넌스 및 규제 준수",
+      "산업별 깊이 있는 데이터 전략",
+      "GDPR 등 규제 환경에서의 운영 경험",
+      "글로벌 수준의 기술 역량"
+    ],
+    "differentiation": "유럽형 데이터 컨설팅의 엄밀함에 Palantir의 강력한 플랫폼을 결합. 산업별로 세분화된 솔루션 패키지를 제공.",
+    "targetMarket": "유럽 대기업, 규제·컴플라이언스가 중요한 기업",
+    "priority": 2,
+    "relevanceToSB": "산업별 AX 서비스 패키지 설계에 좋은 참고. 유럽의 데이터 거버넌스 문화를 한국 시장에 맞게 해석할 수 있는 힌트 제공."
+  },
+  {
+    "id": 5,
+    "name": "SPR",
+    "slug": "spr",
+    "type": "AI & Data Implementation Consulting",
+    "website": "https://spr.com/capability/artificial-intelligence-consulting/palantir-consulting-implementation/",
+    "tagline": "Secure Data Ecosystem at Scale",
+    "whatTheyDo": "SPR은 Palantir Foundry/AIP 구현 서비스를 전문으로 하는 컨설팅 회사로, 정부·민간 조직 대상 보안형 데이터 생태계 구축에 집중합니다. 엔터프라이즈급 데이터 통합과 AI 운영 시스템 구축.",
+    "solutions": [
+      "Palantir Foundry 기반 데이터 통합",
+      "Palantir AIP 운영 워크플로우 구축",
+      "정부급 보안 데이터 거버넌스",
+      "대규모 데이터 마이그레이션",
+      "AI 운영 시스템 구축"
+    ],
+    "strengths": [
+      "정부·공공기관 보안 요구사항에 대한 깊은 이해",
+      "Foundry로 데이터 통합, AIP로 운영 AI 구축이라는 명확한 메시지",
+      "엔터프라이즈급 보안 및 거버넌스 구축",
+      "대규모 프로젝트 운영 경험"
+    ],
+    "differentiation": "보안·거버넌스를 우선하는 공공기관·규제 기관 대상 전문성. Foundry-AIP 메시지가 매우 명확하고 체계적.",
+    "targetMarket": "정부·공공기관, 금융기관, 대형 기업",
+    "priority": 2,
+    "relevanceToSB": "중견·대기업 및 공공기관 AX 제안서 구조에 참고하기 좋음. 보안·거버넌스 메시지를 강조하는 한국 공공시장 제안에 유용."
+  },
+  {
+    "id": 6,
+    "name": "Rackspace Technology",
+    "slug": "rackspace",
+    "type": "Cloud & Managed Operations",
+    "website": "https://www.rackspace.com/newsroom/strategic-partnership-palantir",
+    "tagline": "Managed AX Service Platform",
+    "whatTheyDo": "Rackspace는 Palantir와 전략 파트너십을 통해 Foundry/AIP 운영, 클라우드 호스팅, 데이터 마이그레이션, 관리형 운영을 통합 제공합니다. 구축 이후 운영 책임까지 지는 전체 생명주기 관리 서비스.",
+    "solutions": [
+      "Palantir Foundry/AIP 운영 서비스",
+      "클라우드 호스팅 (AWS, Azure, GCP)",
+      "데이터 마이그레이션",
+      "관리형 운영 (Managed Services)",
+      "24/7 기술 지원"
+    ],
+    "strengths": [
+      "클라우드 기반 운영 인프라의 안정성",
+      "구축 후 운영까지 책임지는 종합 서비스",
+      "글로벌 데이터센터 네트워크",
+      "SLA 기반 운영 보장"
+    ],
+    "differentiation": "Palantir 플랫폼의 구축뿐만 아니라 운영 단계까지 책임지는 Managed Service 모델. SaaS처럼 운영하는 AX 시스템.",
+    "targetMarket": "클라우드 친화적 대기업, 운영 부담을 덜고 싶은 중견기업",
+    "priority": 2,
+    "relevanceToSB": "대표님이 AX 플랫폼을 SaaS+운영대행으로 판매할 때 참고할 수 있는 좋은 모델. 고객 입장에서 '구축 후 운영 부담'을 완전히 없애주는 서비스 포지셔닝."
+  },
+  {
+    "id": 7,
+    "name": "Accenture Federal Services",
+    "slug": "accenture-federal",
+    "type": "Large Consulting & SI Firm (Government Focused)",
+    "website": "https://www.accenturefederal.com/",
+    "tagline": "AI Transformation for Public Sector",
+    "whatTheyDo": "Accenture Federal Services는 Palantir와 미 연방정부 AI 업무 협력을 통해 공공기관의 AI 도입, 인력 교육, AIP 기반 업무 혁신을 수행합니다. 대형 컨설팅사의 규모와 팔란티어의 기술력을 결합.",
+    "solutions": [
+      "공공기관 AI 도입 전략",
+      "Palantir AIP 기반 워크플로우 구축",
+      "공무원 AI 교육 및 역량 강화",
+      "업무 프로세스 혁신",
+      "거버넌스 및 위험 관리"
+    ],
+    "strengths": [
+      "공공기관의 복잡한 이해관계 파악",
+      "대형 컨설팅사의 리소스 풀",
+      "미 연방정부 요구사항 깊이 있는 이해",
+      "변화관리 및 교육 역량"
+    ],
+    "differentiation": "공공기관 중심의 대형 컨설팅사가 Palantir 기술을 결합. AI 도입만이 아니라 조직 문화 변화까지 포괄하는 종합 서비스.",
+    "targetMarket": "미 연방정부 기관, 공공 조직, 규제 기관",
+    "priority": 2,
+    "relevanceToSB": "한국 공공기관·지자체·국방 분야 제안에 참고할 수 있음. 대형 컨설팅사와의 협업 구조를 이해하는 데 유용."
+  },
+  {
+    "id": 8,
+    "name": "PVM Inc.",
+    "slug": "pvm",
+    "type": "Government & Public Sector Digital Services",
+    "website": "https://www.pvmit.com/",
+    "tagline": "Long-term Palantir Operations Partner",
+    "whatTheyDo": "PVM은 Palantir U.S. Government Partnership Vanguard 파트너로, 공공·정보기관·법집행기관 대상 Foundry 구현, 앱 개발, 온톨로지 개발, 장기 지원을 수행합니다. 정부 분야의 가장 경험 많은 Palantir 파트너 중 하나.",
+    "solutions": [
+      "Palantir Foundry 구현",
+      "정보기관·법집행 맞춤 애플리케이션 개발",
+      "온톨로지 설계 및 구현",
+      "조사·정보분석 워크플로우 구축",
+      "장기 지원 및 운영"
+    ],
+    "strengths": [
+      "공공·정보기관 특화 도메인 지식",
+      "Palantir Foundry의 깊이 있는 이해",
+      "온톨로지 설계 전문성",
+      "장기 계약 기반 신뢰 관계 구축"
+    ],
+    "differentiation": "공공·정보기관·법집행 분야에 특화된 가장 깊이 있는 Palantir 파트너. 단기 프로젝트가 아닌 장기 운영 모델.",
+    "targetMarket": "미 공공기관, 정보기관, 법집행기관, 공공 안보 조직",
+    "priority": 2,
+    "relevanceToSB": "한국 공공 AX, 선거·행정 데이터 플랫폼에 참고할 만한 장기 운영 모델. 온톨로지 설계 방법론도 학습 가치 높음."
+  },
+  {
+    "id": 9,
+    "name": "BigBear.ai",
+    "slug": "bigbear",
+    "type": "AI Decision & Defense Data Company",
+    "website": "https://bigbear.ai/",
+    "tagline": "AI-Powered Decision Intelligence",
+    "whatTheyDo": "BigBear.ai는 순수 컨설팅이 아니라 Palantir 플랫폼 위에 산업별 AI 제품을 개발·배포하는 회사입니다. 예측 분석, 의사결정 AI, 방산·물류·에너지 등 특정 분야의 전문 애플리케이션을 Foundry 위에 구축.",
+    "solutions": [
+      "예측 분석 (Predictive Analytics)",
+      "의사결정 AI 플랫폼",
+      "방산 데이터 분석",
+      "물류·공급망 최적화",
+      "에너지 분야 AI 솔루션"
+    ],
+    "strengths": [
+      "Palantir Foundry 기반 산업별 제품 개발",
+      "도메인 특화 AI 알고리즘",
+      "실제 운영 데이터로 검증된 솔루션",
+      "빠른 배포 및 확장성"
+    ],
+    "differentiation": "컨설팅이 아닌 산업별 제품화. Palantir 플랫폼을 '기반'으로 하여 자체 고부가 AI 제품을 구축·판매하는 모델.",
+    "targetMarket": "방산·물류·에너지 등 특정 산업의 대형 조직",
+    "priority": 3,
+    "relevanceToSB": "대표님의 '산업별 솔루션 확장' 전략과 유사한 모델. AX Dental, AX Election, Fire Navi 같은 산업별 솔루션을 플랫폼 위에 구축하는 방식과 부합."
+  },
+  {
+    "id": 10,
+    "name": "Gallatin AI",
+    "slug": "gallatin",
+    "type": "Defense Operations AI Platform",
+    "website": "https://www.gallatin.ai/",
+    "tagline": "Ontology-Driven Defense Intelligence",
+    "whatTheyDo": "Gallatin AI는 Palantir Foundry, AIP, Defense Ontology SDK와 호환·통합하는 국방 작전 AI 플랫폼입니다. Palantir의 Ontology SDK를 활용하여 외부 전문 애플리케이션을 Palantir 생태계에 연결하는 아키텍처 모델.",
+    "solutions": [
+      "국방 작전 데이터 플랫폼",
+      "의사결정 지원 AI",
+      "Navigator 플랫폼",
+      "Ontology SDK 기반 통합",
+      "실시간 상황 분석"
+    ],
+    "strengths": [
+      "Palantir Ontology SDK와의 깊이 있는 통합",
+      "국방 작전 도메인의 전문 지식",
+      "외부 애플리케이션을 Foundry와 연결하는 방식",
+      "실시간 의사결정 지원"
+    ],
+    "differentiation": "Palantir Ontology SDK를 활용하여 자체 애플리케이션을 Foundry와 통합하는 모델. '핵심 인프라+산업별 앱' 구조의 실제 사례.",
+    "targetMarket": "국방부, 작전 기관, 군 지휘부",
+    "priority": 3,
+    "relevanceToSB": "대표님의 'AX Ontology OS + 산업별 앱' 구조와 가장 유사. Ontology SDK 기반 외부 애플리케이션 연결 방식이 정확히 대표님의 비전과 부합."
+  }
+]
