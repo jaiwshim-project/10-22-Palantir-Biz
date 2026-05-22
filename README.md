@@ -89,13 +89,21 @@
 
 - **회사 개요**: 이름, 유형, 태그라인
 - **공식 웹사이트 링크**
-- **5가지 섹션**:
+- **8가지 상세 섹션**:
   1. **회사 소개** — 핵심 비즈니스 설명
-  2. **제공 솔루션 & 서비스** — 주요 서비스 목록
+  2. **제공 솔루션 & 서비스** — 주요 서비스 목록 (5-6개)
   3. **핵심 강점** — 경쟁 우위 포인트
   4. **차별화 포인트** — 시장에서의 포지셔닝
   5. **주요 대상 시장** — 타겟 고객군
-- **참고 가치**: 대표님 비즈니스에의 시사점
+  6. **참고 가치** — 대표님 비즈니스에의 구체적 시사점
+  7. **성공 사례 & 컨설팅 프로젝트** ⭐ NEW
+     - 실제 수행한 프로젝트 2-4개
+     - 각 사례별 도전과제, 솔루션, 결과, 기간
+     - 산업별, 규모별 다양한 사례
+  8. **관련 자료 & 참고 문서** ⭐ NEW
+     - Whitepaper, Technical Guide, Case Study, Blog, Webinar 등
+     - 공개되어 있는 회사의 자료와 링크
+     - 깊이 있는 학습을 위한 참고자료
 
 ---
 
@@ -176,9 +184,36 @@ vercel --prod
   "differentiation": "...",
   "targetMarket": "...",
   "priority": 1,
-  "relevanceToSB": "..."
+  "relevanceToSB": "...",
+  "caseStudies": [
+    {
+      "title": "프로젝트명",
+      "industry": "산업",
+      "challenge": "도전과제",
+      "solution": "솔루션",
+      "result": "결과 및 성과",
+      "duration": "기간 (예: 12개월)"
+    }
+  ],
+  "resources": [
+    {
+      "title": "자료명",
+      "type": "Whitepaper|Case Study|Blog|Webinar|Technical Guide|Video",
+      "url": "https://...",
+      "description": "자료에 대한 간단한 설명"
+    }
+  ]
 }
 ```
+
+### 필드 설명
+
+| 필드 | 설명 | 예시 |
+|------|------|------|
+| `caseStudies` | 회사가 수행한 실제 성공 사례 (배열) | 2-4개 프로젝트 |
+| `resources` | 공개된 자료 및 참고 문서 링크 (배열) | 3-5개 자료 |
+| case study 구조 | 도전과제 → 솔루션 → 결과의 3단계 스토리 | 비즈니스 임팩트 중심 |
+| resource type | 자료의 종류 | Blog, Whitepaper, Case Study 등 |
 
 ---
 
@@ -186,9 +221,36 @@ vercel --prod
 
 ### 새로운 회사 추가
 
-1. `data/companies.json`에 회사 정보 추가
-2. `pages/company-slug.html` 파일 생성 (company-template.html 복사)
-3. `script.js`의 필터 로직 자동으로 업데이트됨
+1. **`data/companies.json` 편집**: 회사 정보 객체 추가
+   ```json
+   {
+     "id": 11,
+     "name": "...",
+     "slug": "company-slug",
+     // ... 기본 필드들
+     "caseStudies": [ ... ],  // 필수
+     "resources": [ ... ]      // 필수
+   }
+   ```
+
+2. **HTML 페이지 생성**: `company-template.html` 복사 → `pages/company-slug.html`로 저장
+
+3. **자동 업데이트**
+   - 메인 페이지 필터 자동 갱신
+   - 회사 카드 자동 생성
+   - 네비게이션 자동 연결
+
+### 성공 사례 & 자료 추가 팁
+
+**성공 사례 작성**:
+- **도전과제**: "레거시 시스템의 데이터 사일로 문제 해결 필요"
+- **솔루션**: "Foundry를 도입하여 모든 데이터 소스를 통합"
+- **결과**: "데이터 통합 시간 80% 단축, 리스크 감지 정확도 95%"
+
+**자료 링크 추가**:
+- 회사 웹사이트의 Resources/Blog/Case Studies 페이지 검색
+- 공개된 Whitepaper, 기술 가이드 확인
+- 회사 유튜브, 팟캐스트 등의 미디어 링크
 
 ### 스타일 수정
 
