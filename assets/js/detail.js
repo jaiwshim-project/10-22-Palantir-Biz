@@ -108,6 +108,24 @@ function renderCompanyDetail(company) {
     </div>
   `).join('');
   document.getElementById('resources').innerHTML = resourcesHtml;
+
+  // Related Companies (same priority group)
+  const relatedCompanies = companies.filter(c => c.priority === company.priority && c.id !== company.id);
+  const relatedHtml = `
+    <div class="detail-section">
+      <h2>🔗 같은 Priority 그룹의 다른 회사</h2>
+      <div class="related-companies-grid">
+        ${relatedCompanies.map(c => `
+          <a href="./${c.slug}.html" class="related-company-card">
+            <div class="related-company-badge">Priority ${c.priority}</div>
+            <h4>${c.name}</h4>
+            <p>${c.tagline}</p>
+          </a>
+        `).join('')}
+      </div>
+    </div>
+  `;
+  document.getElementById('relatedCompanies').innerHTML = relatedHtml;
 }
 
 // Load on page ready
